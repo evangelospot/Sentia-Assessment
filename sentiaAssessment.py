@@ -81,7 +81,7 @@ for i in range(0, numOfCustomers):
 	customersList.append(customers)
 
 
-	#Merge the containers list of dicts to the customersList of dicts, so that each container will have a customer code
+	#Merge the containers list (of dicts) to the customersList of dicts, so that each container will have a customer code
 	for a,b in zip(customersList, containers):
 		a.update(b)
 
@@ -102,7 +102,7 @@ for item in customersList:
 
 
 
-#Merge the customersListofDicts to the Shipping list of dicts with the customersList of dicts, so that each customer will be given the corresponding shipping type (car, or bike)
+#Merge the customersList (of dicts) to the Shipping list of dicts with the customersList of dicts, so that each customer will be given the corresponding shipping type (car, or bike)
 for c,d in zip(shippingList, customersList):
 	c.update(d)
 
