@@ -123,4 +123,4 @@ try:
             writer.writerow(key)
 
 except IOError:
-    print("The temporary file is open. Please, close it to write the new data")
+    print("The temporary file is open, please, close it.")
