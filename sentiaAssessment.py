@@ -26,26 +26,33 @@ for i, row in df.iterrows():
 
 	#If the container type in the current line of the excel file is Bag
 	if (row[0]) == 'Bags':
-		#For every row in containers_to_stored csv file, create a dict with keys the container code, type and dimensions
+		
+		#Create a dict for evert bag container
 		bags = {'Container code': i, 'Type': row[0], 'Height': row[1], 'Width': row[2], 'Depth': row[3], 'Weight': row[4]}
-		#Append each dict to a list of dict
+		#Append each bags dict to a list of dict
 		bagsList.append(bags)
 
-		#Append the list of dict to a list with all the containers that will be used for merging list of dicts later (see line 88)
+		#Append each bags dict to a list with all type of containers that will be used for merging list of dicts later (see line 88)
 		containers.append(bags)
 
 	elif (row[0]) == 'Normal Boxes':
+		#Create a dict for evert normalBox container
 		normalBoxes = {'Container code': i, 'Type': row[0], 'Height': row[1], 'Width': row[2], 'Depth': row[3]}
+		
+		#Append each normalBoxes dict to a list of dict
 		normalBoxesList.append(normalBoxes)
 
-		#Append the list of dict to a list with all the containers that will be used for merging list of dicts later (see line 88)
+		#Append each normalBoxes dict to a list with all type of containers that will be used for merging list of dicts later (see line 88)
 		containers.append(normalBoxes)
 
 	elif (row[0]) == 'Cold Boxes':
+		#Create a dict for evert coldBox container
 		coldBoxes = {'Container code': i, 'Type': row[0], 'Height': row[1], 'Width': row[2], 'Depth': row[3]}
+		
+		#Append each coldBoxes dict to a list of dict
 		coldBoxesList.append(coldBoxes)
 
-		#Append the list of dict to a list with all the containers that will be used for merging list of dicts later (see line 88)
+		#Append the each coldBoxes dict to a list with all type of containers that will be used for merging list of dicts later (see line 88)
 		containers.append(coldBoxes)
 
 
